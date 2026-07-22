@@ -17,6 +17,8 @@ status-website:
   name: Arcanum Archive Status
   introTitle: Uptime Monitor
   introMessage: Status page for Arcanum Archive
+  apiBasePath: https://imm0r.github.io/MTGTC-Archive-Status
+  userContentBasePath: https://raw.githubusercontent.com/imm0r/MTGTC-Archive-Status/main
   navbar:
     - title: Status
       href: /
