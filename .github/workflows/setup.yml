@@ -33,7 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.head_ref || github.ref_name }}
+          ref: main
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Update template
         uses: upptime/uptime-monitor@v1.43.10
@@ -79,6 +79,14 @@ jobs:
           command: "site"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
+      - name: Copy data files to site
+        run: |
+          mkdir -p site/status-page/__sapper__/export/api
+          mkdir -p site/status-page/__sapper__/export/graphs
+          mkdir -p site/status-page/__sapper__/export/history
+          cp -r api/* site/status-page/__sapper__/export/api/ 2>/dev/null || true
+          cp -r graphs/* site/status-page/__sapper__/export/graphs/ 2>/dev/null || true
+          cp -r history/* site/status-page/__sapper__/export/history/ 2>/dev/null || true
       - uses: peaceiris/actions-gh-pages@v4
         name: GitHub Pages Deploy
         with:
