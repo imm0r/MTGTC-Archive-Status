@@ -1,11 +1,26 @@
+# Change these
 owner: imm0r
 repo: MTGTC-Archive-Status
+
 sites:
-  - name: App
+  - name: Arcanum Archive App
     url: https://imm0r.github.io/MTGTC-Archive/
-  - name: Font1
+  - name: Keyrune Font
     url: https://imm0r.github.io/MTGTC-Archive/assets/keyrune/keyrune.woff2
-  - name: Font2
+  - name: Mana Font
     url: https://imm0r.github.io/MTGTC-Archive/assets/mana/mana.woff2
-  - name: API
+  - name: Supabase API
     url: https://api.supabase.co/health
+
+status-website:
+  logoUrl: https://raw.githubusercontent.com/imm0r/MTGTC-Archive/main/logo-header.png
+  name: Arcanum Archive Status
+  introTitle: Uptime Monitor
+  introMessage: Status page for Arcanum Archive
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/imm0r/MTGTC-Archive
+    - title: Arcanum Archive
+      href: https://imm0r.github.io/MTGTC-Archive/

@@ -14,65 +14,30 @@
 # * More by Anand Chowdhary: https://anandchowdhary.com
 
 
-name: Setup CI
+name: Static Site CI
 on:
   push:
     paths:
-      - ".upptimerc.yml"
+      - "assets/**"
+  schedule:
+    - cron: "0 1 * * *"
   repository_dispatch:
-    types: [setup]
+    types: [static_site]
   workflow_dispatch:
 concurrency:
   group: ${{ github.repository }}-${{ github.head_ref || github.ref_name }}-upptime
   cancel-in-progress: false
 jobs:
   release:
-    name: Setup Upptime
+    name: Build and deploy site
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout
         uses: actions/checkout@v6
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           token: ${{ secrets.GH_PAT || github.token }}
-      - name: Update template
-        uses: upptime/uptime-monitor@v1.43.10
-        with:
-          command: "update-template"
-        env:
-          GH_PAT: ${{ secrets.GH_PAT || github.token }}
-      - name: Update response time
-        uses: upptime/uptime-monitor@v1.43.10
-        with:
-          command: "response-time"
-        env:
-          GH_PAT: ${{ secrets.GH_PAT || github.token }}
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
-      - name: Update summary in README
-        uses: upptime/uptime-monitor@v1.43.10
-        with:
-          command: "readme"
-        env:
-          GH_PAT: ${{ secrets.GH_PAT || github.token }}
-      - name: Generate graphs
-        id: dispatch_graphs
-        uses: benc-uk/workflow-dispatch@v1
-        continue-on-error: true
-        with:
-          workflow: Graphs CI
-          token: ${{ secrets.GH_PAT || github.token }}
-      - name: Setup Node.js for direct graph generation
-        if: steps.dispatch_graphs.outcome == 'failure'
-        uses: actions/setup-node@v6
-        with:
-          node-version: "20"
-      - name: Generate graphs directly if dispatch fails
-        if: steps.dispatch_graphs.outcome == 'failure'
-        uses: upptime/uptime-monitor@v1.43.10
-        with:
-          command: "graphs"
-        env:
-          GH_PAT: ${{ secrets.GH_PAT || github.token }}
       - name: Generate site
         uses: upptime/uptime-monitor@v1.43.10
         with:
