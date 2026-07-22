@@ -1,26 +1,15 @@
 owner: imm0r
 repo: MTGTC-Archive-Status
-userAgent: Upptime (https://upptime.js.org)
+userAgent: Upptime
 commitMessages:
   commitAuthorName: Upptime Bot
   commitAuthorEmail: 73464110+upptime@users.noreply.github.com
-commitAuthor:
-  name: Upptime Bot
-  email: 73464110+upptime@users.noreply.github.com
-  avatar: https://avatars.githubusercontent.com/u/73464110?v=4
-assignees:
-  - imm0r
 timezone: Europe/Berlin
-checks:
-  domains:
-    enabled: true
-    interval: 300
 status-website:
-  cname: status.arcanum-archive.de
   logoUrl: https://raw.githubusercontent.com/imm0r/MTGTC-Archive/main/logo-header.png
   name: Arcanum Archive Status
-  introTitle: "Arcanum Archive Uptime Monitor"
-  introMessage: Status page for Arcanum Archive — Magic card collection tracker
+  introTitle: Arcanum Archive Uptime Monitor
+  introMessage: Status page for Arcanum Archive monitoring
   navbar:
     - title: Status
       href: /
@@ -28,9 +17,6 @@ status-website:
       href: https://github.com/imm0r/MTGTC-Archive
     - title: Arcanum Archive
       href: https://imm0r.github.io/MTGTC-Archive/
-  metaTags:
-    - name: "robots"
-      content: "noindex"
 sites:
   - name: Arcanum Archive (App)
     url: https://imm0r.github.io/MTGTC-Archive/
