@@ -1,25 +1,11 @@
 owner: imm0r
 repo: MTGTC-Archive-Status
 sites:
-  - name: Arcanum Archive App
+  - name: App
     url: https://imm0r.github.io/MTGTC-Archive/
-    expectedStatusCodes:
-      - 200
-  - name: Keyrune Font
+  - name: Font1
     url: https://imm0r.github.io/MTGTC-Archive/assets/keyrune/keyrune.woff2
-    expectedStatusCodes:
-      - 200
-  - name: Mana Font
+  - name: Font2
     url: https://imm0r.github.io/MTGTC-Archive/assets/mana/mana.woff2
-    expectedStatusCodes:
-      - 200
-  - name: Supabase API
+  - name: API
     url: https://api.supabase.co/health
-    expectedStatusCodes:
-      - 200
-status-website:
-  name: Arcanum Archive Status
-  introTitle: Status
-  navbar:
-    - title: Status
-      href: /

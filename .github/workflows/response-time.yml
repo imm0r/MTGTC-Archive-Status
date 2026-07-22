@@ -20,7 +20,7 @@ jobs:
           ref: main
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Update response time
-        uses: upptime/response-time@v1
+        uses: upptime/response-time@main
         with:
           token: ${{ secrets.GH_PAT || github.token }}
           commit_message: "response-time: update [skip ci]"
