@@ -20,7 +20,7 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Generate summary
-        uses: upptime/summary@v1.38.4
+        uses: upptime/summary@master
         with:
           token: ${{ secrets.GH_PAT || github.token }}
           commit_message: "summary: update summary [skip ci]"
