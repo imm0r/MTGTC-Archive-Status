@@ -23,7 +23,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_PAT || github.token }}
-      - uses: upptime/uptime-monitor@master
+      - uses: upptime/uptime-monitor@v1.39.0
         with:
           token: ${{ secrets.GH_PAT || github.token }}
           update_template: true
