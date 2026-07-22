@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 102,
-    "timeDay": 102,
-    "timeWeek": 102,
-    "timeMonth": 102,
-    "timeYear": 102,
+    "time": 103,
+    "timeDay": 103,
+    "timeWeek": 103,
+    "timeMonth": 103,
+    "timeYear": 103,
     "dailyMinutesDown": {}
   },
   {
@@ -28,11 +28,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 87,
-    "timeDay": 87,
-    "timeWeek": 87,
-    "timeMonth": 87,
-    "timeYear": 87,
+    "time": 86,
+    "timeDay": 86,
+    "timeWeek": 86,
+    "timeMonth": 86,
+    "timeYear": 86,
     "dailyMinutesDown": {}
   },
   {
@@ -46,11 +46,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 124,
-    "timeDay": 124,
-    "timeWeek": 124,
-    "timeMonth": 124,
-    "timeYear": 124,
+    "time": 109,
+    "timeDay": 109,
+    "timeWeek": 109,
+    "timeMonth": 109,
+    "timeYear": 109,
     "dailyMinutesDown": {}
   },
   {
@@ -59,18 +59,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.supabase.co.ico",
     "slug": "supabase-api",
     "status": "down",
-    "uptime": "0.87%",
-    "uptimeDay": "0.87%",
-    "uptimeWeek": "0.87%",
-    "uptimeMonth": "0.87%",
-    "uptimeYear": "0.87%",
+    "uptime": "0.79%",
+    "uptimeDay": "0.79%",
+    "uptimeWeek": "0.79%",
+    "uptimeMonth": "0.79%",
+    "uptimeYear": "0.79%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-07-22": 40
+      "2026-07-22": 45
     }
   }
 ]
