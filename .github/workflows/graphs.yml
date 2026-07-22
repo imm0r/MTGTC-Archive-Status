@@ -1,0 +1,27 @@
+name: Graphs CI
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  repository_dispatch:
+    types:
+      - Webhook_*
+  workflow_dispatch:
+permissions:
+  contents: write
+  deployments: write
+  pull-requests: write
+jobs:
+  release:
+    name: Generate Graphs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_PAT || github.token }}
+      - name: Generate graphs
+        uses: upptime/graphs@v1
+        with:
+          token: ${{ secrets.GH_PAT || github.token }}
+          commit_message: "graphs: update [skip ci]"
+          working-directory: graphs

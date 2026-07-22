@@ -1,0 +1,31 @@
+name: Setup CI
+on:
+  push:
+    branches:
+      - master
+  repository_dispatch:
+    types:
+      - Webhook_*
+  workflow_dispatch:
+permissions:
+  checks: write
+  contents: write
+  deployments: write
+  pages: write
+  pull-requests: write
+  statuses: write
+jobs:
+  release:
+    name: Setup Upptime
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_PAT || github.token }}
+      - uses: upptime/uptime-monitor@v1
+        with:
+          token: ${{ secrets.GH_PAT || github.token }}
+          update_template: true
+          commit_message: "chore: update template [skip ci]"
+          status_website_token: ${{ secrets.STATUS_WEBSITE_TOKEN }}
