@@ -8,4 +8,4 @@ sites:
   - name: Font2
     url: https://imm0r.github.io/MTGTC-Archive/assets/mana/mana.woff2
   - name: API
-    url: https://api.supabase.co/health
+    url: https://api.supabase.com/health
