@@ -12,6 +12,32 @@ sites:
   - name: Supabase API
     url: https://api.supabase.com/health
 
+  # Karten-, Preis- und Bilddaten der App. Geprüft wird eine echte
+  # Kartenabfrage statt der Startseite: sie belegt, dass nicht nur der
+  # Webserver steht, sondern auch die Kartendatenbank antwortet — und genau
+  # daran hängt die Sammlungsansicht. Alle fünf Minuten eine Abfrage bleibt
+  # weit innerhalb dessen, worum Scryfall bittet.
+  - name: Scryfall API
+    url: https://api.scryfall.com/cards/named?exact=Black+Lotus
+
+  # Cardmarket steht hinter Cloudflares Botabwehr und beantwortet jede Anfrage
+  # aus einem Rechenzentrum mit 403 — mit Browser-Kennung, mit Bot-Kennung und
+  # ganz ohne. GitHub-Actions-Runner SIND Rechenzentrum, ein gewöhnlicher Check
+  # meldete hier also dauerhaft Ausfall, ohne dass etwas kaputt wäre.
+  #
+  # Die 403 gilt darum als gesund: sie beweist, dass Cloudflare die Anfrage
+  # annimmt und zustellt. Ein echter Ausfall bleibt trotzdem sichtbar, weil
+  # Cloudflare dann 52x liefert statt 403 — nachgeprüft an cardmarket.de, das
+  # tatsächlich mit 522 antwortet. 301/302 stehen mit in der Liste, weil sie
+  # die Standardcodes ERSETZT: ohne sie würde eine künftige Weiterleitung als
+  # Ausfall zählen.
+  #
+  # Die Adresse ist bewusst www.cardmarket.com/de/… — cardmarket.de ist keine
+  # gültige Adresse, dort antwortet Cloudflare mit 522.
+  - name: Cardmarket
+    url: https://www.cardmarket.com/de/Magic
+    expectedStatusCodes: [200, 301, 302, 403]
+
 status-website:
   # Die Seite liegt unter github.io/MTGTC-Archive-Status, nicht im Wurzelpfad.
   # Ohne baseUrl exportiert Sapper <base href="/"> und lädt sein Bundle von
