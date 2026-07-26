@@ -3,12 +3,12 @@ owner: imm0r
 repo: MTGTC-Archive-Status
 
 sites:
+  # Deckt zugleich die Schriften Keyrune und Mana ab: die liegen unter
+  # assets/ im selben Repo und werden von derselben GitHub-Pages-Auslieferung
+  # ausgegeben. Eigene Einträge dafür maßen dreimal dasselbe — fällt Pages
+  # aus, fallen alle drei gemeinsam aus.
   - name: Arcanum Archive App
     url: https://imm0r.github.io/MTGTC-Archive/
-  - name: Keyrune Font
-    url: https://imm0r.github.io/MTGTC-Archive/assets/keyrune/keyrune.woff2
-  - name: Mana Font
-    url: https://imm0r.github.io/MTGTC-Archive/assets/mana/mana.woff2
   - name: Supabase API
     url: https://api.supabase.com/health
 
