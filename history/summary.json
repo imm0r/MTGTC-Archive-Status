@@ -90,6 +90,24 @@
     "dailyMinutesDown": {}
   },
   {
+    "name": "Commander Spellbook API",
+    "url": "https://backend.commanderspellbook.com/variants?limit=1",
+    "icon": "https://icons.duckduckgo.com/ip3/backend.commanderspellbook.com.ico",
+    "slug": "commander-spellbook-api",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {}
+  },
+  {
     "name": "Cardmarket",
     "url": "https://www.cardmarket.com/de/Magic",
     "icon": "https://icons.duckduckgo.com/ip3/www.cardmarket.com.ico",
