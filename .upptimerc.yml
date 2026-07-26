@@ -13,15 +13,18 @@ sites:
     url: https://api.supabase.com/health
 
 status-website:
+  # Die Seite liegt unter github.io/MTGTC-Archive-Status, nicht im Wurzelpfad.
+  # Ohne baseUrl exportiert Sapper <base href="/"> und lädt sein Bundle von
+  # /client/… – dort liegt nichts, das Skript kam nie an und der Ladekreis
+  # drehte sich ewig.
+  baseUrl: /MTGTC-Archive-Status
   logoUrl: https://raw.githubusercontent.com/imm0r/MTGTC-Archive/main/logo-header.png
   name: Arcanum Archive Status
   introTitle: Uptime Monitor
   introMessage: Status page for Arcanum Archive
-  apiBasePath: https://imm0r.github.io/MTGTC-Archive-Status
-  userContentBasePath: https://raw.githubusercontent.com/imm0r/MTGTC-Archive-Status/main
   navbar:
     - title: Status
-      href: /
+      href: https://imm0r.github.io/MTGTC-Archive-Status/
     - title: GitHub
       href: https://github.com/imm0r/MTGTC-Archive
     - title: Arcanum Archive
