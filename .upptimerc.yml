@@ -20,6 +20,16 @@ sites:
   - name: Scryfall API
     url: https://api.scryfall.com/cards/named?exact=Black+Lotus
 
+  # Combo-Erkennung und Deck-Bracket. Überwacht wird bewusst backend.… und
+  # nicht commanderspellbook.com: die App ruft ausschließlich das Backend auf,
+  # über die Edge Function „combos" (supabase/functions/combos/index.ts, CSB =
+  # https://backend.commanderspellbook.com). Auf die Website verweist sie an
+  # keiner Stelle — deren Zustand sagt über die App also nichts aus.
+  # Die Abfrage ist genau die Form, die die Edge Function verwendet: ohne
+  # abschließenden Schrägstrich, damit keine Weiterleitung dazwischenliegt.
+  - name: Commander Spellbook API
+    url: https://backend.commanderspellbook.com/variants?limit=1
+
   # Cardmarket steht hinter Cloudflares Botabwehr und beantwortet jede Anfrage
   # aus einem Rechenzentrum mit 403 — mit Browser-Kennung, mit Bot-Kennung und
   # ganz ohne. GitHub-Actions-Runner SIND Rechenzentrum, ein gewöhnlicher Check
