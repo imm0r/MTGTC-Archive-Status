@@ -40,18 +40,20 @@
     "url": "https://api.scryfall.com/cards/named?exact=Black+Lotus",
     "icon": "https://icons.duckduckgo.com/ip3/api.scryfall.com.ico",
     "slug": "scryfall-api",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 117,
-    "timeDay": 65,
-    "timeWeek": 98,
-    "timeMonth": 117,
-    "timeYear": 117,
-    "dailyMinutesDown": {}
+    "time": 114,
+    "timeDay": 58,
+    "timeWeek": 92,
+    "timeMonth": 114,
+    "timeYear": 114,
+    "dailyMinutesDown": {
+      "2026-08-09": 0
+    }
   },
   {
     "name": "Cardmarket",
