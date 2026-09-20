@@ -1,7 +1,7 @@
 url: https://api.scryfall.com/cards/named?exact=Black+Lotus
 status: up
 code: 200
-responseTime: 39
-lastUpdated: 2026-09-19T00:48:36.840Z
+responseTime: 135
+lastUpdated: 2026-09-20T00:30:50.211Z
 startTime: 2026-07-26T12:52:34.120Z
 generator: Upptime <https://github.com/upptime/upptime>
